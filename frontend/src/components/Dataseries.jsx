@@ -66,5 +66,4 @@ const Dataseries = () => {
         </>
     )
 }
-
 export default Dataseries

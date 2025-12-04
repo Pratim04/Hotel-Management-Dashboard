@@ -1,0 +1,22 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* 
+html, body {
+    height: 100%;
+} */
+
+body {
+    background-color: springgreen;
+}
+
+.box {
+    background-color: rgb(231, 231, 231);
+    width: 100px;
+    height: 100vh;   /* THIS is even better */
+    position: fixed; /* keeps it stuck on the left */
+    top: 0;
+    left: 0;
+}
