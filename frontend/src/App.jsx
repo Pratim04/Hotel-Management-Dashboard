@@ -1,16 +1,27 @@
-import Barchart from "./components/Barchart";
-import Dataseries from "./components/Dataseries";
-import Navbar from "./components/Navbar";
-import Piechart from "./components/Piechart";
 import Sidebar from "./components/Sidebar";
-import Linechart from "./components/LineChart";
-import Doughnutchart from "./components/Doughnutchart";
+import Dashboard from "./pages/Dashboard";
+import Transactions from "./pages/Transactions";
+import Settings from "./pages/Settings";
+import Support from "./pages/Support";
+import Performance from "./pages/Performance";
+import News from "./pages/News";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
-    <>
-      <Sidebar />
-    </>
+    <Router>
+      <div className="App">
+        <Sidebar/>
+        <Routes>
+          <Route path="/" element={<Dashboard/>} />
+          <Route path="/news" element={<News/>} />
+          <Route path="/transactions" element={<Transactions/>} />
+          <Route path="/settings" element={<Settings/>} />
+          <Route path="/support" element={<Support/>} />
+          <Route path="/performance" element={<Performance/>} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 

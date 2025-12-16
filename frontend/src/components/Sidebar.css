@@ -3,20 +3,54 @@
     margin: 0;
 }
 
-/* 
-html, body {
-    height: 100%;
-} */
-
 body {
-    background-color: springgreen;
+    background-color: white;
 }
 
-.box {
-    background-color: rgb(231, 231, 231);
-    width: 100px;
-    height: 100vh;   /* THIS is even better */
-    position: fixed; /* keeps it stuck on the left */
-    top: 0;
-    left: 0;
+.sidebar {
+    width: 23.62%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: #804000;
+    color: white;
 }
+
+nav {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+}
+
+.menu.bottom {
+    margin-top: auto; 
+}
+
+.logocontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    width: 35%;
+}
+
+.profileContainer {
+    width: 100px;
+    height: 100px;
+}
+
+.profile {
+    height: 50%;
+    width: 50%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+
