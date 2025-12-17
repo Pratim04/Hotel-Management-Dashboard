@@ -1,13 +1,7 @@
 import React from 'react'
-import "./Sidebar.css";
-import Icon from '../assets/image.png';
-import Profile from '../assets/GitHubDP.jpg';
-import Dashboard from '../pages/Dashboard';
-import Transactions from '../pages/Transactions';
-import Settings from '../pages/Settings';
-import Performance from '../pages/Performance';
-import News from '../pages/News';
-import Support from '../pages/Support';
+import "./Sidebar.scss";
+import Icon from '../assets/dices.svg';
+import Profile from '../assets/profile.png';
 
 import DashboardIcon from '../assets/Dashboard.svg';
 import TransactionsIcon from '../assets/Transactions.svg';
@@ -20,9 +14,9 @@ import SupportIcon from '../assets/Support.svg';
 const Sidebar = () => {
   return (
     <div className='sidebar'>
-      <div className='logocontainer'>
+      <div className='logoContainer'>
         <img src={Icon} alt="icon" className="logo" />
-        <h2 className="title">Starburks</h2>
+        <h2 className="title">Starbucks</h2>
       </div>
       <div className="burgerContainer">
         <div className="burgerTrigger"></div>
@@ -31,13 +25,13 @@ const Sidebar = () => {
       <div className="profileContainer">
         <img src={Profile} alt="profile" className="profile" />
         <div className="profileContents">
-          <p className="name">Hello, Pratim ✨</p>
-          <p>pratimhalder04@gmail.com</p>
+          <p className="name">Hello, John ✨</p>
+          <p>jonhsmith@gmail.com</p>
         </div>
       </div>
       <div className="contentsContainer">
         <ul>
-          <li>
+          <li className='active'>
             <img src={DashboardIcon} alt="dashboard" />
             <a href="/">Dashboard</a>
           </li>
