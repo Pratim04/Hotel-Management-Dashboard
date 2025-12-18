@@ -1,4 +1,4 @@
-@import "../styles/variables";
+@use "../styles/variables" as *;
 
 body {
     overflow: hidden;
@@ -7,6 +7,12 @@ body {
     font-family: $fontFamily;
     background-color: $veryLightGreen;
     text-transform: capitalize;
+    
+    
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
 }
 
 .sidebar {
@@ -15,7 +21,7 @@ body {
     top: 0;
     left: 0;
     padding: 2rem 3rem;
-    width: 20rem;
+    width: 15rem;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -37,7 +43,7 @@ body {
         content: "";
         background-color: $green;
         position: absolute;
-        right: (-35px/2);
+        right: calc(-35px/2);
         top: calc(9rem/1.15);
         width: 35px;
         height: 35px;
@@ -90,10 +96,10 @@ body {
     }
 
     .burgerContainer::after {
-        content: "";
+        content: '';
         position: absolute;
         right: 35px;
-        top: (35px/2);
+        top: calc(35px/2);
         z-index: 0;
         width: calc(6rem + 15rem);
         background-color: $lightGrey;
@@ -109,7 +115,7 @@ body {
         
         img.profile {
             width: auto;
-            height: 3rem;
+            height: 3.25rem;
         }
 
         .profileContents {
@@ -156,6 +162,10 @@ body {
                 width: 100%;
                 border-radius: 1rem;
                 cursor: pointer;
+
+                img {
+                    padding: 0 1rem 0 0.5rem;
+                }
                 
                 a {
                     text-decoration: none;
@@ -184,15 +194,42 @@ body {
     }
 }
 
-// .sidebar.active {
-//     width: 3rem;
+.sidebar.active {
+    width: 3rem;
 
-//     .logoContainer.active {
-//         h2.titale {
-//             opacity: 0;
-//         }
-//     }
-// }
+    .logoContainer.active {
+        h2.title {
+            opacity: 0;
+        }
+    }
+
+    .burgerContainer.active {
+
+        .burgermenu {
+            background-color: $white;
+        }
+
+        .burgermenu::before {
+            transform: translateY(0rem) rotate(0deg);
+        }
+
+        .burgermenu::after {
+            transform: translateY(0rem) rotate(0deg);
+        }
+    }
+
+    .profileContainer {
+        .profileContents {
+            opacity: 0;
+        }
+    }
+
+    .contentsContainer {
+        a {
+            opacity: 0;
+        }
+    }
+}
 
 
 
