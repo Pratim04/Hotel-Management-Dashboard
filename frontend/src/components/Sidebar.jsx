@@ -1,20 +1,21 @@
+// React :
 import React, { useState } from 'react'
+import { NavLink } from 'react-router-dom';
+
 // Styling : 
 import "./Sidebar.scss";
+
 // Assets :
 import TransactionsIcon from '../assets/Transactions.svg';
 import PerformanceIcon from '../assets/Performance.svg';
 import DashboardIcon from '../assets/Dashboard.svg';
 import SettingsIcon from '../assets/Settings.svg';
 import SupportIcon from '../assets/Support.svg';
-import Profile from '../assets/profile.png';
+import Profile from '../assets/pratim2.png';
 import NewsIcon from '../assets/News.svg';
 import Icon from '../assets/dices.svg';
 
-import { useLocation } from "react-router-dom";
 const Sidebar = () => {
-  const location = useLocation();
-
   const [closeMenu, setCloseMenu] = useState(true);
 
   const handleCloseMenu = () => {
@@ -22,71 +23,103 @@ const Sidebar = () => {
   };
 
   return (
-    <div className={closeMenu === false ? 'sidebar' : 'sidebar active'}>
-      <div className={
-        closeMenu === false ?
-          'logoContainer'
+    <div className = {
+        closeMenu === false 
+          ? 'sidebar'
+          : 'sidebar active'
+        }
+      >
+      <div className = {
+        closeMenu === false 
+          ? 'logoContainer'
           : 'logoContainer active'
-      }
+        }
       >
         <img src={Icon} alt="icon" className="logo" />
         <h2 className="title">Starbucks</h2>
       </div>
-      <div className={
-        closeMenu === false ?
-          'burgerContainer'
+
+      <div className = {
+        closeMenu === false 
+          ? 'burgerContainer'
           : 'burgerContainer active'
-      }>
+        }
+      >
         <div
-          className="burgerTrigger"
-          onClick={() => {
+          className = "burgerTrigger"
+          onClick = { () => {
             handleCloseMenu();
           }}
         ></div>
-        <div className="burgermenu"></div>
+
+        <div className = "burgermenu"></div>
       </div>
-      <div className={
-        closeMenu === false ?
-          'profileContainer'
+
+      <div className = {
+        closeMenu === false
+          ? 'profileContainer'
           : 'profileContainer active'
-      }>
+        }
+      >
         <img src={Profile} alt="profile" className="profile" />
         <div className="profileContents">
-          <p className="name">Hello, Pratim ✨</p>
+          <p className="name">Hello, Pratim</p>
           <p>pratim04@gmail.com</p>
         </div>
       </div>
+
       <div className={
-        closeMenu === false ?
-          'contentsContainer'
+        closeMenu === false
+          ? 'contentsContainer'
           : 'contentsContainer active'
-      }>
+        }
+      >
         <ul>
-          <li className={location.pathname === "/" ? 'active' : ""}>
-            <img src={DashboardIcon} alt="dashboard" />
-            <a href="/">Dashboard</a>
+
+          <li>
+            <NavLink to = "/" className={({ isActive }) => isActive ? "nav-link active": "nav-link"}>
+              <img src={DashboardIcon} alt="dashboard" />
+              <span>Dashboard</span>
+            </NavLink>
           </li>
-          <li className={location.pathname === "/transactions" ? 'active' : ""}>
-            <img src={TransactionsIcon} alt="transactions" />
-            <a href="/transactions">transactions</a>
+          
+          <li>
+            <NavLink to = "/transactions" className = {({ isActive }) => isActive ? "nav-link active": "nav-link"}>
+              <img src={TransactionsIcon} alt="transactions" />
+              <span>Transactions</span>
+            </NavLink>
           </li>
-          <li className={location.pathname === "/performance" ? 'active' : ""}>
-            <img src={PerformanceIcon} alt="performance" />
-            <a href="/performance">performance</a>
+          
+          <li>
+            <NavLink to = "/performance" className= {({ isActive }) => isActive ? "nav-link active" : "nav-link"}>
+              <img src={PerformanceIcon} alt="performance" />
+              <span>Performance</span>
+            </NavLink>
           </li>
-          <li className={location.pathname === "/News" ? 'active' : ""}>
-            <img src={NewsIcon} alt="News" />
-            <a href="/news">news</a>
+          
+          <li>
+            <NavLink to = "/news" className= {({ isActive }) => isActive ? "nav-link active" : "nav-link"}>
+              <img src={NewsIcon} alt="news" />
+              <span>News</span>
+            </NavLink>
           </li>
-          <li className={location.pathname === "/Settings" ? 'active' : ""}>
-            <img src={SettingsIcon} alt="Settings" />
-            <a href="/Settings">Settings</a>
+          
+          <li>
+            <NavLink to = "/settings" className= {({ isActive }) => isActive ? "nav-link active" : "nav-link"}>
+              <img src={SettingsIcon} alt="settings" />
+              <span>Settings</span>
+            </NavLink>
           </li>
-          <li className={location.pathname === "/Support" ? 'active' : ""}>
-            <img src={SupportIcon} alt="Support" />
-            <a href="/Support">Support</a>
+          
+          <li>
+            <NavLink to = "/support" className= {({ isActive }) => isActive ? "nav-link active" : "nav-link"}>
+              <img src={SupportIcon} alt="support" />
+              <span>Support</span>
+            </NavLink>
           </li>
+        
         </ul>
+      
       </div>
     </div>
   );
