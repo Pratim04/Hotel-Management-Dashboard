@@ -1,9 +1,11 @@
-import React from 'react'
+import React from 'react';
+import BarChart from '../components/Barchart';
+import LineChart from '../components/LineChart';
 
 function Dashboard() {
     return (
     <>
-        <h1>Dashboard</h1>
+        <BarChart/>
     </>
     )     
 }

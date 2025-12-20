@@ -1,15 +1,15 @@
 [
     {
-        "label": "books",
-        "Value": 32
+        "iteam": "books",
+        "price": 32
     },
     {
-        "label": "pen",
-        "Value": 63
+        "iteam": "pen",
+        "price": 63
     },
     {
-        "label": "cover",
-        "Value": 23
+        "iteam": "cover",
+        "price": 23
     }
     
 ]
