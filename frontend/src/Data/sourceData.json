@@ -1,16 +1,16 @@
+
 [
-    {
-        "iteam": "books",
-        "price": 32
-    },
-    {
-        "iteam": "pen",
-        "price": 63
-    },
-    {
-        "iteam": "cover",
-        "price": 23
-    }
-    
+    { "label": "books", "Revenue": 320, "Loss": 120 },
+    { "label": "pen", "Revenue": 630, "Loss": 50 },
+    { "label": "cover", "Revenue": 230, "Loss": 90 },
+    { "label": "notebook", "Revenue": 780, "Loss": 140 },
+    { "label": "marker", "Revenue": 410, "Loss": 70 },
+    { "label": "eraser", "Revenue": 150, "Loss": 20 },
+    { "label": "highlighter", "Revenue": 520, "Loss": 60 },
+    { "label": "file", "Revenue": 290, "Loss": 45 },
+    { "label": "calculator", "Revenue": 910, "Loss": 110 },
+    { "label": "backpack", "Revenue": 1200, "Loss": 260 },
+    { "label": "ruler", "Revenue": 180, "Loss": 25 },
+    { "label": "stapler", "Revenue": 360, "Loss": 55 }
 ]
 

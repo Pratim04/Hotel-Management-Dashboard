@@ -1,0 +1,26 @@
+@use '../styles/variables' as *;
+.main {
+  background-color: $veryLightGreen;
+  height: 100%;
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto 1fr 1fr;
+
+  grid-template-areas: 
+    "TR TU TL TN"
+    "barchart barchart piechart piechart"
+    "linechart linechart doughnutchart doughnutchart";
+  gap: 1rem;
+}
+
+.TR { grid-area: TR; }
+.TU { grid-area: TU; }
+.TL { grid-area: TL; }
+.TN { grid-area: TN; }
+
+.barchart  { grid-area: barchart; }
+.linechart { grid-area: linechart; }
+.piechart { grid-area: piechart;}
+.doughnutchart { grid-area: doughnutchart;}

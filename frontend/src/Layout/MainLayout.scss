@@ -1,0 +1,18 @@
+@use '../styles/variables' as *;
+.layout {
+    box-sizing: content-box;
+    display: grid;
+    grid-template-columns: minmax(3rem,auto) 1fr;
+    grid-template-rows: 64px 1fr;
+    height: 100%;
+    grid-template-areas: 
+    "SideBar TopBar"
+    "SideBar Content";
+
+    overflow: hidden;
+}
+
+.TopBar { grid-area: TopBar; }
+.SideBar { grid-area: SideBar; }
+.Content { padding: 1rem; grid-area: Content;}
+
