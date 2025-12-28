@@ -1,18 +1,18 @@
 @use '../styles/variables' as *;
 .layout {
-    box-sizing: content-box;
-    display: grid;
-    grid-template-columns: minmax(3rem,auto) 1fr;
-    grid-template-rows: 64px 1fr;
+    box-sizing: border-box;
     height: 100%;
+    width: 100%;
+    display: grid;
+    // gap: 10px;
+    grid-template-columns: auto 1fr 1fr;
+    grid-template-rows: 4rem 1fr 1fr;
     grid-template-areas: 
-    "SideBar TopBar"
-    "SideBar Content";
+    "SideBar-Layout TopBar-Layout TopBar-Layout"
+    "SideBar-Layout Content-Layout Content-Layout"
+    "SideBar-Layout Content-Layout Content-Layout";
 
-    // overflow: hidden;
+    .SideBar-Layout { height: 100%; width: 100%; grid-area: SideBar-Layout; }
+    .TopBar-Layout { height: 100%; width: 100%; grid-area: TopBar-Layout; } 
+    .Content-Layout { height: 100%; width: 100%; grid-area: Content-Layout; }
 }
-
-.TopBar { grid-area: TopBar; }
-.SideBar { grid-area: SideBar; }
-.Content { padding: 1rem; grid-area: Content;}
-

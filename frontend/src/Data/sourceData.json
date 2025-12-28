@@ -1,6 +1,9 @@
 
 [
-    { "label": "books", "Revenue": 320, "Loss": 120 },
+    { "label": "books", 
+        "Revenue": 320, 
+        "Loss": 120 
+    },
     { "label": "pen", "Revenue": 630, "Loss": 50 },
     { "label": "cover", "Revenue": 230, "Loss": 90 },
     { "label": "notebook", "Revenue": 780, "Loss": 140 },

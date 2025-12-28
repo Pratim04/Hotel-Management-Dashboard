@@ -1,62 +1,28 @@
 @use '../styles/variables' as *;
 .wrapper {
-  height: 100vh;
-  width: 100%;
-  padding: 10PX;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 0.75rem;
-  background-color: $veryLightGreen;
-}
-
-.gridLayout {
+  display: grid;
   height: 100%;
   width: 100%;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(6, 1fr);
-  gap: 1rem;
-}
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 2fr 2fr;
 
-.box {
-  background-color: $veryLightGreen;
-  border-radius: 1.5rem;
-}
+  grid-template-areas:
+  "SC SC SC SC"
+  "PMR PMR PMR CC"
+  "MC MC MC MAP";
+  gap: 2px;
 
-.box1 {
-  background-color: #fff;
-  grid-column: span 2;
-  grid-row: span 3;
-}
-
-.box2 {
-  grid-row: span 4;
-  .wrap {
+  .test { background: $veryLightGreen; height: 100%; width: 100%;}
+  .status-card 
+  { 
+    grid-area: SC;
     display: flex;
-    justify-content: center;
+    justify-content:space-around;
     align-items: center;
-    flex-direction: column;
-    gap: 10px;
   }
+  .per-month-revenue { grid-area: PMR; }
+  .circle-chart { grid-area: CC; }
+  .mail-chat { grid-area: MC; }
+  .map { grid-area: MAP; }
 }
 
-.box3 {
-  grid-row: span 3;
-  background-color: #fff;
-}
-
-.box4 {
-  grid-row: span 3;
-  background-color: #fff;
-}
-
-.box5 {
-  grid-row: span 2;
-  background-color: #fff;
-}
-// .TR .TL .TC .TE {
-//   height: 90%;
-//   width: 90%;
-//   position: relative;
-// } 
