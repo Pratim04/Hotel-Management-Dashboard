@@ -22,7 +22,7 @@
   }
   .per-month-revenue { grid-area: PMR; }
   .circle-chart { grid-area: CC; }
-  .mail-chat { grid-area: MC; }
+  .new-customer { grid-area: MC; display: flex; justify-content: center;align-items: center; }
   .map { grid-area: MAP; }
 }
 

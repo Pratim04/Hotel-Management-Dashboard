@@ -1,0 +1,62 @@
+@use '../styles/variables' as *;
+
+.List-Container {
+    font-family: $fontFamily;
+    color: $darkGreen;
+    height: calc(100% - 5%);
+    width: calc(100% - 5%);
+    background-color: $veryLightGreen;
+
+    box-shadow:
+        0 4px 10px rgba(0, 0, 0, 0.08),
+        0 1px 3px rgba(0, 0, 0, 0.12);
+
+    padding: 12px;
+    border-radius: 12px;
+
+    h2 {
+        text-align: center;
+        color: $lightGreen;
+    }
+
+    .MailDiv {
+        width: 100%;
+        height: 50px;
+        background-color: $veryLightGreen;
+        display: grid;
+        grid-template-columns: 1fr 2fr 0.5fr 0.5fr;
+        grid-template-areas:
+            "NAME EMAIL TIME A-N";
+        gap: 2px;
+        cursor: pointer;
+
+        .name {
+            grid-area: NAME;
+        }
+
+        .email {
+            grid-area: EMAIL;
+        }
+
+        .time {
+            grid-area: TIME;
+        }
+
+        .status {
+            grid-area: A-N;
+        }
+
+        .common {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    .MailDiv:hover {
+        background-color: $lightGrey;
+        border-radius: 1rem;
+        transition: 0.25s all;
+    }
+
+}

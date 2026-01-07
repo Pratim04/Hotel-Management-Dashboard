@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1,
+        "name": "Rahul Sharma",
+        "email": "rahul.sharma@gmail.com",
+        "status": "Active",
+        "checkedIn": true,
+        "checkInDate": "2026-01-05"
+    },
+    {
+        "id": 2,
+        "name": "Anita Das",
+        "email": "anita.das@gmail.com",
+        "status": "Checked Out",
+        "checkedIn": false,
+        "checkOutDate": "2026-01-04"
+    },
+    {
+        "id": 3,
+        "name": "Amit Roy",
+        "email": "amit.roy@gmail.com",
+        "status": "Active",
+        "checkedIn": true,
+        "checkInDate": "2026-01-06"
+    },
+    {
+        "id": 4,
+        "name": "Sneha Paul",
+        "email": "sneha.paul@gmail.com",
+        "status": "Checked Out",
+        "checkedIn": false,
+        "checkOutDate": "2026-01-03"
+    },
+    {
+        "id": 5,
+        "name": "Kunal Verma",
+        "email": "kunal.verma@gmail.com",
+        "status": "Active",
+        "checkedIn": true,
+        "checkInDate": "2026-01-07"
+    }
+]

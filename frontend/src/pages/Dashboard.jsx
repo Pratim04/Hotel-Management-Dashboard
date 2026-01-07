@@ -6,6 +6,91 @@ import Linechart from '../components/Charts/Linechart';
 import StatCard from '../components/Charts/KPI/StatCard';
 import DoughnutChart from '../components/Charts/Doughnutchart';
 import GeoChart from '../components/Charts/GeoChart';
+import NewCutomerList from '../components/NewAddedCustomer';
+
+const Customer = [
+    {
+        "id": 1,
+        "name": "Rahul Sharma",
+        "email": "rahul.sharma@gmail.com",
+        "status": "Active",
+        "checkedIn": true,
+        "checkInDate": "2026-01-05"
+    },
+    {
+        "id": 2,
+        "name": "Anita Das",
+        "email": "anita.das@gmail.com",
+        "status": "Checked Out",
+        "checkedIn": false,
+        "checkOutDate": "2026-01-04"
+    },
+    {
+        "id": 3,
+        "name": "Amit Roy",
+        "email": "amit.roy@gmail.com",
+        "status": "Active",
+        "checkedIn": true,
+        "checkInDate": "2026-01-06"
+    },
+    {
+        "id": 4,
+        "name": "Sneha Paul",
+        "email": "sneha.paul@gmail.com",
+        "status": "Checked Out",
+        "checkedIn": false,
+        "checkOutDate": "2026-01-03"
+    },
+    {
+        "id": 5,
+        "name": "Kunal Verma",
+        "email": "kunal.verma@gmail.com",
+        "status": "Active",
+        "checkedIn": true,
+        "checkInDate": "2026-01-07"
+    },
+    {
+        "id": 6,
+        "name": "Priya Sen",
+        "email": "priya.sen@gmail.com",
+        "status": "Active",
+        "checkedIn": true,
+        "checkInDate": "2026-01-08"
+    },
+    // {
+    //     "id": 7,
+    //     "name": "Rohit Mallick",
+    //     "email": "rohit.mallick@gmail.com",
+    //     "status": "Checked Out",
+    //     "checkedIn": false,
+    //     "checkOutDate": "2026-01-06"
+    // },
+    // {
+    //     "id": 8,
+    //     "name": "Neha Chatterjee",
+    //     "email": "neha.chatterjee@gmail.com",
+    //     "status": "Active",
+    //     "checkedIn": true,
+    //     "checkInDate": "2026-01-09"
+    // },
+    // {
+    //     "id": 9,
+    //     "name": "Sourav Dutta",
+    //     "email": "sourav.dutta@gmail.com",
+    //     "status": "Checked Out",
+    //     "checkedIn": false,
+    //     "checkOutDate": "2026-01-05"
+    // },
+    // {
+    //     "id": 10,
+    //     "name": "Ishita Banerjee",
+    //     "email": "ishita.banerjee@gmail.com",
+    //     "status": "Active",
+    //     "checkedIn": true,
+    //     "checkInDate": "2026-01-10"
+    // }
+
+]
 function Dashboard() {
     return (
         <div className="wrapper">
@@ -41,7 +126,9 @@ function Dashboard() {
                     isPositive={true}
                 />
             </div>
-            <div className="test mail-chat"></div>
+            <div className="test new-customer">
+                <NewCutomerList customers={Customer} />
+            </div>
             <div className="test map">
                 <GeoChart />
             </div>
