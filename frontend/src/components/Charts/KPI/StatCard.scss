@@ -1,5 +1,6 @@
+@use '../../../styles/variables' as *;
 .stat-card {
-  background: #ffffff;
+  background: $veryLightGreen;
   border-radius: 16px;
   padding: 1rem;
   display: flex;

@@ -57,38 +57,38 @@ const Customer = [
         "checkedIn": true,
         "checkInDate": "2026-01-08"
     },
-    // {
-    //     "id": 7,
-    //     "name": "Rohit Mallick",
-    //     "email": "rohit.mallick@gmail.com",
-    //     "status": "Checked Out",
-    //     "checkedIn": false,
-    //     "checkOutDate": "2026-01-06"
-    // },
-    // {
-    //     "id": 8,
-    //     "name": "Neha Chatterjee",
-    //     "email": "neha.chatterjee@gmail.com",
-    //     "status": "Active",
-    //     "checkedIn": true,
-    //     "checkInDate": "2026-01-09"
-    // },
-    // {
-    //     "id": 9,
-    //     "name": "Sourav Dutta",
-    //     "email": "sourav.dutta@gmail.com",
-    //     "status": "Checked Out",
-    //     "checkedIn": false,
-    //     "checkOutDate": "2026-01-05"
-    // },
-    // {
-    //     "id": 10,
-    //     "name": "Ishita Banerjee",
-    //     "email": "ishita.banerjee@gmail.com",
-    //     "status": "Active",
-    //     "checkedIn": true,
-    //     "checkInDate": "2026-01-10"
-    // }
+    {
+        "id": 7,
+        "name": "Rohit Mallick",
+        "email": "rohit.mallick@gmail.com",
+        "status": "Checked Out",
+        "checkedIn": false,
+        "checkOutDate": "2026-01-06"
+    },
+    {
+        "id": 8,
+        "name": "Neha Chatterjee",
+        "email": "neha.chatterjee@gmail.com",
+        "status": "Active",
+        "checkedIn": true,
+        "checkInDate": "2026-01-09"
+    },
+    {
+        "id": 9,
+        "name": "Sourav Dutta",
+        "email": "sourav.dutta@gmail.com",
+        "status": "Checked Out",
+        "checkedIn": false,
+        "checkOutDate": "2026-01-05"
+    },
+    {
+        "id": 10,
+        "name": "Ishita Banerjee",
+        "email": "ishita.banerjee@gmail.com",
+        "status": "Active",
+        "checkedIn": true,
+        "checkInDate": "2026-01-10"
+    }
 
 ]
 function Dashboard() {

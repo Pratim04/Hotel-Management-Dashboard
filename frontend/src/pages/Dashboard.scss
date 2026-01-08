@@ -11,6 +11,7 @@
   "PMR PMR PMR CC"
   "MC MC MC MAP";
   gap: 2px;
+  padding: 10px 0px 10px 0px;
 
   .test { background: $veryLightGreen; height: 100%; width: 100%;}
   .status-card 
@@ -20,7 +21,7 @@
     justify-content:space-around;
     align-items: center;
   }
-  .per-month-revenue { grid-area: PMR; }
+  .per-month-revenue { grid-area: PMR; height: 95%; width: 100%; }
   .circle-chart { grid-area: CC; }
   .new-customer { grid-area: MC; display: flex; justify-content: center;align-items: center; }
   .map { grid-area: MAP; }
