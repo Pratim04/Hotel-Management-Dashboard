@@ -6,31 +6,56 @@
     height: 250px;
     width: calc(100% - 5%);
     background-color: $veryLightGreen;
-    
+
     box-shadow:
-    0 4px 10px rgba(0, 0, 0, 0.08),
-    0 1px 3px rgba(0, 0, 0, 0.12);
-    
+        0 4px 10px rgba(0, 0, 0, 0.08),
+        0 1px 3px rgba(0, 0, 0, 0.12);
+
     padding: 12px;
     border-radius: 12px;
-    
+
     .List-header {
+        position: relative;
         display: flex;
-        justify-content: center;
+        // justify-content: center;
         align-items: center;
         height: 15%;
-        width: calc(100% - 5%);
-        
+        width:100%;
+
         h2 {
-            text-align: center;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
             color: $lightGreen;
         }
+
+        // Button to add new customer
+        .add-new {
+            margin-right: 15px;
+            margin-left: auto;
+            height: 25px;
+            width: 25px;
+            background-color: $lightGreen;
+            border-radius: 3px;
+            border: none;
+            color: $veryLightGreen;
+            font-size: large;
+            font-size: $heavyFont;
+            transition: 0.2s all;
+            cursor: pointer;
+        }
+
+        .add-new:hover {
+            background-color: $darkGreen;
+            transition: 0.25s all;
+        }
     }
+
     .List {
         height: 85%;
         width: 100%;
         overflow-y: auto;
-        
+
         .MailDiv {
             width: 100%;
             height: 50px;
@@ -38,33 +63,33 @@
             display: grid;
             grid-template-columns: 1fr 2fr 0.5fr 0.5fr;
             grid-template-areas:
-            "NAME EMAIL TIME A-N";
+                "NAME EMAIL TIME A-N";
             gap: 2px;
             cursor: pointer;
-            
+
             .name {
                 grid-area: NAME;
             }
-            
+
             .email {
                 grid-area: EMAIL;
             }
-            
+
             .time {
                 grid-area: TIME;
             }
-            
+
             .status {
                 grid-area: A-N;
             }
-            
+
             .common {
                 display: flex;
                 justify-content: center;
                 align-items: center;
             }
         }
-        
+
         .MailDiv:hover {
             background-color: $lightGrey;
             border-radius: 1rem;

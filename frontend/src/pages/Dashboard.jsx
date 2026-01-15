@@ -1,13 +1,11 @@
-import React from 'react';
 import "./Dashboard.scss";
-import Barchart from '../components/Charts/Barchart';
+import React , { useState }from 'react';
 import Piechart from '../components/Charts/Piechart';
-import Linechart from '../components/Charts/Linechart';
-import StatCard from '../components/Charts/KPI/StatCard';
-import DoughnutChart from '../components/Charts/Doughnutchart';
 import GeoChart from '../components/Charts/GeoChart';
-import NewCutomerList from '../components/NewAddedCustomer';
-
+import Barchart from '../components/Charts/Barchart';
+import CustomerForm from '../components/CustomerForm';
+import StatCard from '../components/Charts/KPI/StatCard';
+import NewCustomerList from '../components/NewAddedCustomer';
 const Customer = [
     {
         "id": 1,
@@ -92,7 +90,10 @@ const Customer = [
 
 ]
 function Dashboard() {
+    const [showPopup, setShowPopup] = useState(false);
     return (
+    <>
+        <CustomerForm show={showPopup} ClosePopUp={()=>setShowPopup(false)}/>
         <div className="wrapper">
             <div className="test per-month-revenue">
                 <Barchart />
@@ -106,33 +107,34 @@ function Dashboard() {
                     value={"$15623"}
                     percentage={15.6}
                     isPositive={true}
-                />
+                    />
                 <StatCard
                     title={"New Customer"}
                     value={"56"}
                     percentage={6.3}
                     isPositive={true}
-                />
+                    />
                 <StatCard
                     title={"Loss"}
                     value={"$253"}
                     percentage={10}
                     isPositive={false}
-                />
+                    />
                 <StatCard
                     title="Employee"
                     value="41"
                     percentage={12}
                     isPositive={true}
-                />
+                    />
             </div>
             <div className="test new-customer">
-                <NewCutomerList customers={Customer} />
+                <NewCustomerList customers={Customer} OpenModal={()=>setShowPopup(true)}/>
             </div>
             <div className="test map">
                 <GeoChart />
             </div>
         </div>
+    </>
     );
 }
 
