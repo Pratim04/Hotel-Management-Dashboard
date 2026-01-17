@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './CustomerForm.scss';
 import CROSS from '../assets/Cross.svg';
+import InputFieldComp from './Reuseable/InputField';
 const CustomerForm = ({show,ClosePopUp}) => {
     if(!show)
         return null;
@@ -12,7 +13,7 @@ const CustomerForm = ({show,ClosePopUp}) => {
                 </button>
             </div>
             <div className="form-area">
-                {/* Customer Details Will be here */}
+                <InputFieldComp Placeholder='Full name'/>
             </div>
         </div>
     )
