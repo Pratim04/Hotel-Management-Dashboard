@@ -1,12 +1,15 @@
 import React from 'react';
 import './InputField.scss';
 
-const InputField = ({Placeholder}) => {
+const InputField = ({type,value,className,placeholder,onChange,name}) => {
     return (
         <input
-            className="FieldInput"
-            type="text"
-            placeholder={Placeholder}
+            name={name}
+            placeholder={placeholder}
+            type={type}
+            className={className}
+            value={value}
+            onChange={onChange}
         />
     )
 }

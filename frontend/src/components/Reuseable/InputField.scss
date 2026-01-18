@@ -3,9 +3,30 @@
 .FieldInput {
     background-color: $veryLightGreen;
     height: 30px;
-    width: 250px;
-    padding: 5px;
+    width: 350px;
+    padding: 6px 10px;
     border-radius: 10px;
-    border: none;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.12);
+    border: 1.5px solid transparent;
+    margin: 10px;
+    outline: none;
+
+    box-shadow:
+        0 4px 10px rgba(0, 0, 0, 0.08),
+        0 1px 3px rgba(0, 0, 0, 0.12);
+
+    transition:
+        border-color 0.25s ease,
+        box-shadow 0.25s ease,
+        transform 0.15s ease;
+}
+
+/* Focus = highlight */
+.FieldInput:focus {
+    border-color: $lightGreen;
+    box-shadow: 0 0 0 2px rgba($lightGreen, 0.45);
+}
+
+/* Click = slight press */
+.FieldInput:active {
+    transform: scale(0.98);
 }

@@ -42,9 +42,14 @@
     }
     
     .form-area {
-        width: 100%;
-        height: calc(100% - 50px);
+        width: 800px;
+        height: 550px;
         background-color: green;
         background-color: $veryLightGreen;
+        overflow-y: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
     }
 }
